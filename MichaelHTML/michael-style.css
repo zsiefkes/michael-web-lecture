@@ -1,0 +1,52 @@
+/* this whole thing is a rule vvv */
+body /* <== selector */ {     /* this bit is the body */
+	background-color: red; /* this is a declaration */
+	color /* this is a property */: blue /* this is a value */;
+}
+/* end of rule */
+
+p, li {
+	color: rgb(0, 255, 0); /* bright green - 0 red, 255/255 green, 0 blue */
+}
+
+p { /* "type selector" (just a tag name) */
+	margin: 2cm;
+	padding-top: 1em;
+}
+
+p a { /* the space is the "descendant combinator": any "a" element that's inside a
+ * "p" element, at any depth
+ */
+	border: 2px solid #00ff00; /* #0f0  - both bright green*/
+}
+
+.happy /* class selector: all elements with class="happy" */ {
+	color: hsl(60, 100%, 50%); /* yellow: 60 degrees round the colour wheel with
+	 * red at 0, green at 120, blue at 240;
+	 * fully saturated (as yellow as it gets);
+	 * mid-lightness (not faded nor dark)
+	 */
+}
+
+li.happy { /* no space - must both be li *and* have class happy */ 
+	text-decoration: underline;
+}
+
+#hello /* id selector: the one item with ID hello */ {
+	background: white;
+}
+
+img {
+	border: 10px dashed purple;
+	/* ^^^ a pre-defined shorthand for setting all three of these:
+	border-width: 10px;
+	border-style: dashed;
+	border-color: purple;
+	*/
+}
+
+#fred {
+	width: 6cm;
+	height: 4cm;
+	border: 1px solid blue;
+}
