@@ -36,6 +36,26 @@ li.happy { /* no space - must both be li *and* have class happy */
 	background: white;
 }
 
+a[href^="https:"] {
+	font-size: 36pt;
+}
+
+p#hello {
+	background: grey;
+}
+
+p#hello a > em {
+	background: orange;
+}
+
+.happy {
+	outline: 50px dotted magenta;
+}
+
+img[alt] {
+	
+}
+
 img {
 	border: 10px dashed purple;
 	/* ^^^ a pre-defined shorthand for setting all three of these:
@@ -45,8 +65,79 @@ img {
 	*/
 }
 
+img:hover {
+	border: 10px solid black;
+}
+
+li:nth-of-type(2n) {
+	text-decoration: underline;
+}
+
 #fred {
 	width: 6cm;
 	height: 4cm;
 	border: 1px solid blue;
+	
+	position: fixed;
+	top: 0;
+	right: 50px;
 }
+
+.side-image {
+	float: right;
+	max-width: 20%;	
+}
+
+article p {
+	margin: 0;
+	border: 1px solid white;
+}
+
+article p::before {
+	content: attr(id);
+	background: blue;
+}
+
+article {
+	/*column-count: 3;*/
+	/*display: grid;
+	grid-template-columns: 200px 2fr 1fr;*/
+	display: flex;
+	flex-flow: row wrap; /* automatically wraps if there isn't enough space */
+}
+
+#p3 {
+	/*grid-column: 1;
+	grid-row: 1;*/
+	flex: 5;
+}
+
+#p2 {
+	flex: 0.5;
+}
+
+#p2 { flex: 2; }
+
+ul#menu {
+	background: grey;
+	margin: 0;
+	padding: 0;
+}
+
+ul#menu > li {
+	display: inline-block;
+}
+
+ul#menu > li > ul {
+	display: none;
+}
+
+ul#menu > li:hover > ul {
+	display: block;
+	position: absolute;
+	background: darkgrey;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+

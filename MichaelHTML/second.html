@@ -7,17 +7,25 @@
 	</head>
 	<body>
 		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="index.html">About</li>
+			<ul class="top-navbar">
+				<li class="nav-item"><a href="index.html">Home</a></li>
+				<li class="nav-item"><a href="index.html">About</li>
+				<li class="nav-item"><a href="index.html">
+					Gallery
+					<ul class="nav-gallery-dropdown">
+						<li>Web Dev</li>
+						<li>Music</li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="index.html">Contact</li>
 			</ul>
 		</nav>
 		<p>
 			<a href="index.html">Back to index</a>
 		</p>
 		<p>
-			I lived in <em>Christchurch</em> until <strong>2014</strong>.
-			<!-- em and strong tags another instance of modern accessibiltiy-friendly replacements for formerly unuseful tags like b and i
+			I lived in <em><a href="https://en.wikipedia.org/wiki/Christchurch" target="_blank">Ōtautahi</a></em> until <strong>2014</strong>.
+			<!-- em and strong tags another instance of modern accessibility-friendly replacements for formerly unuseful tags like b and i -->
 		</p>
 		<!-- ordered and unordered lists-->
 		<ol>
@@ -30,5 +38,6 @@
 				</ul>
 			</li>
 		</ol>
+		<!-- let's lay out some like, um, gallery items, eh? oh yeah nah! let's use flex to layout the nav -->
 	</body>
 </html>
