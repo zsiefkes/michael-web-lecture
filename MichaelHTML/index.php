@@ -7,9 +7,18 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<title>My first web page</title>
 	</head>
+	<?php $name = "Z"; ?>
 	<body>
+		<h1>
+			<?= "Hello, $name!" ?>
+		</h1>
+		<p>
+			<?= $name ?>
+			<?php echo "$name" ?>
+			<?php echo "use backslash to escape recognising $ as preceding a variable: \$name" ?>
+		</p>
 		<!-- img tag "pointlessly abbreviated" -->
-		<h1>Hello World</h1>
+		<!-- <h1>Hello World</h1> -->
 		<a href="https://en.wikipedia.org/wiki/South_Philadelphia" target="_blank">
 			<img
 				src="u8xxve11y9451.jpg"
@@ -28,6 +37,19 @@
 				My <a href="https://en.wikipedia.org/wiki/Name" target="_blank">name</a> is Zachary and I live in <a href="https://en.wikipedia.org/wiki/Wellington" target="_blank">Te Whanganui-a-Tara</a>, Aotearoa.
 			</p>
 		</section>
+		<!-- php arrays are basically ordered hashmaps. can assign key-value pairs. eg: -->
+		<?php $population = array();
+		$population["Wellington"] = 215100;
+		$population["Christchurch"] = 383200;
+
+		// simple ordered array:
+		$data = array("Wellington", "Christchurch");
+		
+		// print:
+		for ($i = 0; $i < count($data); $i++) {
+			echo $data[$i];
+			echo "\n";
+		} ?>
 		<table>
 			<tr>
 				<th>Place</th>
